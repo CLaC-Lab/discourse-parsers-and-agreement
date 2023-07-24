@@ -86,9 +86,9 @@ Note that this is written for python 2.7, for an update to python 3 try
 5. Finally, run
 
 	```bash
-	python $input_dataset $input_run $output_dir
+	python $input_dataset none $output_dir
 	```
-with dataset containing both the raw text folder and the pdtb_parses.json. This will generate a file in data/output.json
+with input_dataset containing both the raw text folder and the pdtb_parses.json. This will generate a file in data/output.json
 
 6. In our PDTB_Wang_utils directory, download json_to_csv.py and replace json_file_path with the data/output.json file. This will turn the output data into a readable csv.
 
