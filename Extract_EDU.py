@@ -3,13 +3,14 @@ import os
 import json
 import re
 import csv
-# assign directory
-directory = '/home/blaise/Desktop/RST-Finder-Trained/trained-RST-finder/Ind_Essays'
+# ASSIGN DIRECTORY 1
+directory = 'trained-RST-finder/ICNALE'
  
 # iterate over files in
 # that directory
 csv_f = open(directory + '/comb_edus_joint_redo.csv', 'w')
 #⛄ because comma was giving issues in libreoffice calc, and because he just a lil snowman :)
+# replace with your preferred delimiter
 writer = csv.writer(csv_f, delimiter='⛄')
 header = ['file','Essay Type','Country','Level','EDU','RST 2015']
 writer.writerow(header)
@@ -84,9 +85,9 @@ for subdir, dirs, files in os.walk(directory):
             jsonFile.close()
         	
         	
-# assign directory
-directory = '/home/blaise/Desktop/Wang-2017-RST/RST-Parser-GIT/src/Ind_Essays_PreProcess/output'
-EDUS_dire = '/home/blaise/Desktop/Wang-2017-RST/RST-Parser-GIT/src/Ind_Essays_PreProcess'
+# ASSIGN DIRECTORIES
+directory = 'Wang-2017-RST/src/ICNALE/output'
+EDUS_dire = 'Wang-2017-RST/src/ICNALE/'
 
 #https://stackoverflow.com/questions/1883980/find-the-nth-occurrence-of-substring-in-a-string        	
 def find_nth(haystack, needle, n):
